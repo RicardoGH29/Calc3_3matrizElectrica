@@ -27,7 +27,6 @@ while True:
                "Intensity_3_3": complex(values[10]),
                "Voltaje_3": complex(values[11])}
         Matrices = getMatrices(Eq1, Eq2, Eq3)
-        print(Matrices)
         Principal_Matriz = Matrices[0]
         Matriz_Intensidad_1 = Matrices[1]
         Matriz_Intensidad_2 = Matrices[2]
@@ -36,18 +35,16 @@ while True:
         Determinant_Matriz_Intensidad_1 = np.linalg.det(Matriz_Intensidad_1)
         Determinant_Matriz_Intensidad_2 = np.linalg.det(Matriz_Intensidad_2)
         Determinant_Matriz_Intensidad_3 = np.linalg.det(Matriz_Intensidad_3)
+        print(Determinant_Principal_Matriz)
+        print(Determinant_Matriz_Intensidad_1)
+        print(Determinant_Matriz_Intensidad_2)
+        print(Determinant_Matriz_Intensidad_3)
         Intensity_1 = Determinant_Matriz_Intensidad_1 / Determinant_Principal_Matriz
         Intensity_2 = Determinant_Matriz_Intensidad_2 / Determinant_Principal_Matriz
         Intensity_3 = Determinant_Matriz_Intensidad_3 / Determinant_Principal_Matriz
-        print("La intensidad 1 compleja es: ", Intensity_1)
-        print("La intensidad 2 compleja es: ", Intensity_2)
-        print("La intensidad 3 compleja es: ", Intensity_3)
         Intenssity_polar_1 = (convertToPolar(Intensity_1))
         Intenssity_polar_2 = (convertToPolar(Intensity_2))
         Intenssity_polar_3 = (convertToPolar(Intensity_3))
-        print("La intensidad 1 polar es: ", Intenssity_polar_1[0], "el angulo es: ", Intenssity_polar_1[1])
-        print("La intensidad 2 polar es: ", Intenssity_polar_2[0], "el angulo es: ", Intenssity_polar_2[1])
-        print("La intensidad 3 polar es: ", Intenssity_polar_3[0], "el angulo es: ", Intenssity_polar_3[1])
 
         modal = sg.Window("Resultados", auto_size_text=True, auto_size_buttons=True,
                           default_element_size=(40, 1)).Layout(
