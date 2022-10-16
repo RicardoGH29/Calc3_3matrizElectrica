@@ -6,9 +6,9 @@ from fuctions import getMatrices, convertToPolar
 sg.theme('DarkBlue1')
 layout = [
     [sg.Text('Matriz de intensidades'), sg.Text('I1    '), sg.Text('I2      '), sg.Text(' I3     '), sg.Text('V')],
-    [sg.Text('Valores ecuacion 1'), (sg.Input(size=5)), sg.Input(size=5), sg.Input(size=5), sg.Input(size=5)],
-    [sg.Text('Valores ecuacion 2'), sg.Input(size=5), sg.Input(size=5), sg.Input(size=5), sg.Input(size=5)],
-    [sg.Text('Valores ecuacion 3'), sg.Input(size=5), sg.Input(size=5), sg.Input(size=5), sg.Input(size=5)],
+    [sg.Text('Valores ecuacion 1'), (sg.Input(size=5)), sg.Input(size=5), sg.Input(size=5), sg.Input(size=10)],
+    [sg.Text('Valores ecuacion 2'), sg.Input(size=5), sg.Input(size=5), sg.Input(size=5), sg.Input(size=10)],
+    [sg.Text('Valores ecuacion 3'), sg.Input(size=5), sg.Input(size=5), sg.Input(size=5), sg.Input(size=10)],
     [sg.Button('Ok'), sg.Button('Cancel')]]
 
 window = sg.Window('Calculadora Matriz 3x3 de Corrientes', layout)
